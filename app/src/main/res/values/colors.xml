@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/md_teal_800</color>
+    <color name="colorPrimaryDark">@color/md_teal_900</color>
+    <color name="colorAccent">@color/md_teal_500</color>
+    <color name="colorControlNormal">@color/md_grey_400</color>
+    <color name="colorControlActivated">@color/md_teal_600</color>
+    <color name="colorSwitchThumbNormal">@color/md_grey_600</color>
+    <color name="colorWindowBackground">@color/md_grey_50</color>
+
+    <!-- LOGIN -->
+    <color name="btn_disabled_fondo">#1A000000</color>
+    <color name="btn_preseed_fondo">#59000000</color>
+
+    <!-- LISTADO -->
+    <color name="rf1">@color/md_blue_800</color>
+    <color name="rf2">@color/md_red_800</color>
+    <color name="rf3">@color/md_yellow_800</color>
+    <color name="rf4">@color/md_green_800</color>
+
+</resources>

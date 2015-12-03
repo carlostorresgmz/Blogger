@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:orientation="vertical">
+
+    <View android:id="@+id/view_agregar_focus_add"
+        android:layout_width="@dimen/cero_dp"
+        android:layout_height="@dimen/cero_dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/edt_agregar_autor_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edt_agregar_autor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_label_agregar_autor"
+            android:inputType="textCapSentences"
+            android:singleLine="true"
+            android:textSize="@dimen/agregar_txt_labels_size"
+            android:textColor="@color/md_grey_600"
+            android:freezesText="true"
+            android:nextFocusDown="@+id/edt_titulo_desc"
+            tools:ignore="UnusedAttribute" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/edt_agregar_titulo_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/agregar_mt_inputs">
+
+        <EditText
+            android:id="@+id/edt_agregar_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_label_agregar_titulo"
+            android:inputType="textCapSentences"
+            android:singleLine="true"
+            android:textSize="@dimen/agregar_txt_labels_size"
+            android:textColor="@color/md_grey_600"
+            android:freezesText="true"
+            android:nextFocusDown="@+id/edt_agregar_desc"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/edt_agregar_desc_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/agregar_mt_inputs">
+
+        <EditText
+            android:id="@+id/edt_agregar_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_label_agregar_desc"
+            android:gravity="top|left"
+            android:inputType="textMultiLine"
+            android:singleLine="false"
+            android:lines="5"
+            android:textSize="@dimen/agregar_txt_labels_size"
+            android:textColor="@color/md_grey_600"
+            tools:ignore="RtlHardcoded" />
+
+    </android.support.design.widget.TextInputLayout>
+
+</LinearLayout>

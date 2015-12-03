@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_grey_200">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_listado_agregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/listado_floatbtn_margin"
+        android:clickable="true"
+        android:src="@drawable/ic_create"
+        android:tint="@color/md_grey_50"
+        app:backgroundTint="@color/colorPrimary"
+        app:borderWidth="@dimen/cero_dp"
+        app:elevation="@dimen/listado_floatbtn_elevation"
+        app:pressedTranslationZ="@dimen/listado_floatbtn_elevation"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl_listado_update"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_listado"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:scrollbars="none"/>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

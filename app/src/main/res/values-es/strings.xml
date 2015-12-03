@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Blogger</string>
+    <string name="txt_mascara_fechas_print">dd-MM-yyyy hh:mm</string>
+    <string name="NB_PREF">blogger_preferences</string>
+    <string name="NB_DB">blogger_db</string>
+
+    <!-- LISTADO -->
+    <string name="txt_title">Blogger</string>
+    <string name="txt_label_item_fh">Publicado el\u0020</string>
+    <string name="txt_item_btn">Ver contenido</string>
+    <string name="txt_buscar">Buscar</string>
+
+    <!-- AGREGAR ENTRADA -->
+    <string name="txt_title_agregar">Agregar Entrada</string>
+    <string name="txt_label_agregar_autor">Autor</string>
+    <string name="txt_label_agregar_titulo">Titulo</string>
+    <string name="txt_label_agregar_desc">Contenido</string>
+    <string name="txt_agregar_error_autor">Autor requerido</string>
+    <string name="txt_agregar_error_titulo">Titulo requerido</string>
+    <string name="txt_agregar_error_contenido">Contenido requerido</string>
+
+    <string name="txt_pd_title">Publicando</string>
+    <string name="txt_pd_title_0">Cargando</string>
+    <string name="txt_pd_msje">Espere un momento..</string>
+
+    <string name="txt_error_internet">No tienes conexión a internet</string>
+    <string name="txt_success">La entrada se agrego correctamente</string>
+
+    <!-- DETALLE ENTRADA-->
+    <string name="txt_title_detalle">Detalle Entrada</string>
+
+    <!-- WEB SERVICES -->
+    <string name="txt_url">http://192.168.0.7/blogger/web_service.php?</string>
+    <string name="txt_validarusuario">validarUsuario</string>
+    <string name="txt_getEntradas">getEntradas</string>
+    <string name="txt_agregarEntrada">agregarEntrada</string>
+
+</resources>
