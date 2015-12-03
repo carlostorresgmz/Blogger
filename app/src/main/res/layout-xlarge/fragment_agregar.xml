@@ -65,9 +65,11 @@
             android:layout_height="wrap_content"
             android:hint="@string/txt_label_agregar_desc"
             android:gravity="top|left"
-            android:inputType="textMultiLine"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,.:;-_?¿¡!"
+            android:inputType="textMultiLine|textCapCharacters"
             android:singleLine="false"
-            android:lines="5"
+            android:lines="7"
+            android:maxLength="10000"
             android:textSize="@dimen/agregar_txt_labels_size"
             android:textColor="@color/md_grey_600"
             tools:ignore="RtlHardcoded" />
