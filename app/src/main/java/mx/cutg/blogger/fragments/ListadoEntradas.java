@@ -55,7 +55,7 @@ public class ListadoEntradas extends Fragment implements FragmentPassParameters,
     private SwipeRefreshLayout refreshLayout;
     private AdaptadorListado adapterEntradas;
     private RecyclerView recycler;
-    //private SearchView searchView;
+    private SearchView searchView;
     private boolean isLoad = true;
 
     public static ListadoEntradas newInstance() {
@@ -189,7 +189,7 @@ public class ListadoEntradas extends Fragment implements FragmentPassParameters,
         MenuItem search = menu.findItem(R.id.ab_search);
         search.setVisible(true);
 
-        SearchView searchView = (SearchView) MenuItemCompat.getActionView(search);
+        searchView = (SearchView) MenuItemCompat.getActionView(search);
         searchView.setOnQueryTextListener(this);
     }
 
@@ -230,11 +230,9 @@ public class ListadoEntradas extends Fragment implements FragmentPassParameters,
             }
         });
 
-        agregar.setOnClickListener(new View.OnClickListener()
-        {
+        agregar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 String backstackname = ListadoEntradas.this.getClass().getName();
                 ((Blogger) getActivity()).replaceFragment(AgregarEntrada.newInstance(ListadoEntradas.this),
                         getString(R.string.txt_title_agregar),
@@ -303,6 +301,10 @@ public class ListadoEntradas extends Fragment implements FragmentPassParameters,
     @Override
     public void DetalleLoad(PostEntrada entrada)
     {
+        if(!searchView.getQuery().equals("")){
+            searchView.setQuery("", true);
+        }
+
         Bundle bun = new Bundle();
         bun.putParcelable("entrada", entrada);
         String backstackname = ListadoEntradas.this.getClass().getName();
