@@ -209,7 +209,7 @@ public class ListadoEntradas extends Fragment implements FragmentPassParameters,
 
 
     //METODO QUE INICIALIZA LA INTERFAZ DEL FRAGMENT
-    private void initUI(View view, Context ctx)
+    private void initUI(View view, final Context ctx)
     {
         refreshLayout = (SwipeRefreshLayout)view.findViewById(R.id.srl_listado_update);
         recycler = (RecyclerView) view.findViewById(R.id.rv_listado);
@@ -230,13 +230,22 @@ public class ListadoEntradas extends Fragment implements FragmentPassParameters,
             }
         });
 
-        agregar.setOnClickListener(new View.OnClickListener() {
+        agregar.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
-                String backstackname = ListadoEntradas.this.getClass().getName();
-                ((Blogger) getActivity()).replaceFragment(AgregarEntrada.newInstance(ListadoEntradas.this),
-                        getString(R.string.txt_title_agregar),
-                        backstackname);
+            public void onClick(View view)
+            {
+                if(Utils.hadInternet(getActivity()))
+                {
+                    String backstackname = ListadoEntradas.this.getClass().getName();
+                    ((Blogger) getActivity()).replaceFragment(AgregarEntrada.newInstance(ListadoEntradas.this),
+                            getString(R.string.txt_title_agregar),
+                            backstackname);
+                }
+                else
+                {
+                    Toast.makeText(ctx, getString(R.string.txt_error_internet), Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
